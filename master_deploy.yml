@@ -1,0 +1,39 @@
+---
+- import_playbook: playbooks/create_db.yml
+  tags: [db]
+
+- import_playbook: playbooks/extract_autoinstaller.yml
+  tags: [autoinstaller]
+
+- import_playbook: playbooks/update_UT_properties.yml
+  tags: [ut]
+
+- import_playbook: playbooks/update_PF_properties.yml
+  tags: [pf]
+
+- import_playbook: playbooks/yasc_nrm_autoinstaller.yml
+  tags: [nrm_yasc]
+
+- import_playbook: playbooks/update_NRM_properties.yml
+  tags: [nrm]
+
+- import_playbook: playbooks/yasc_autoinstaller.yml
+  tags: [yasc]
+
+- import_playbook: playbooks/deploy_containerized.yml
+  tags: [container]
+
+- import_playbook: playbooks/update_rmiac_properties.yml
+  tags: [rmiac]
+
+- import_playbook: playbooks/update_feui_properties.yml
+  tags: [feui]
+
+- import_playbook: playbooks/update_camac_properties.yml
+  tags: [camac]
+
+- import_playbook: playbooks/update_beui_properties.yml
+  tags: [beui]
+
+- import_playbook: playbooks/deploy_ags.yml
+  tags: [ags]
